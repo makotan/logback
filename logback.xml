@@ -14,7 +14,7 @@
             <level>TRACE</level>
         </filter>
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %marker %cyan(%logger{20}) %msg%n</Pattern>
+	  <Pattern>%-12(%d{HH:mm:ss.SSS}) %highlight(%-5level) %-15(%thread) %cyan(%-40logger{40}) %msg%n</Pattern>
         </layout>
     </appender>
 
@@ -113,6 +113,12 @@
     </logger>
 
     <logger name="freemarker" level="INFO">
+    </logger>
+
+    <logger name="io.netty" level="INFO">
+    </logger>
+
+    <logger name="org.jooby" level="INFO">
     </logger>
 
 

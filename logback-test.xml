@@ -4,7 +4,7 @@
     <property name="LoggingHistoryDir" value="logs/history/" />
     <property name="ROOT_LEVEL" value="TRACE" />
     <timestamp key="byDate" datePattern="yyyyMMdd"/>
-    <property name="MESSAGE_FILE_PATTERN" value="%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level %marker %thread %logger %msg%n" />
+    <property name="MESSAGE_FILE_PATTERN" value="%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level %thread %logger %msg%n" />
     <property name="maxhistory" value="40"/>
     
     
@@ -14,7 +14,7 @@
             <level>TRACE</level>
         </filter>
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %marker %cyan(%logger{20}) %msg%n</Pattern>
+	  <Pattern>%-12(%d{HH:mm:ss.SSS}) %highlight(%-5level) %-15(%thread) %cyan(%-40logger{40}) %msg%n</Pattern>
         </layout>
     </appender>
 
@@ -113,6 +113,12 @@
     </logger>
 
     <logger name="freemarker" level="INFO">
+    </logger>
+
+    <logger name="io.netty" level="INFO">
+    </logger>
+
+    <logger name="org.jooby" level="INFO">
     </logger>
 
 
