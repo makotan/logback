@@ -14,7 +14,7 @@
             <level>TRACE</level>
         </filter>
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level %marker %logger - %msg%n</Pattern>
+            <Pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) %marker %cyan(%logger{20}) %msg%n</Pattern>
         </layout>
     </appender>
 
